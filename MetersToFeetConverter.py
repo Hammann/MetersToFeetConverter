@@ -42,4 +42,7 @@ feet_display.grid(column=1, row=1, sticky="EW", padx=5, pady=5)
 
 calc_button.grid(column=0, row=2, columnspan=2, sticky="EW", padx=5, pady=5)
 
+meters_input.bind("<Return>", calculate_feet)
+meters_input.bind("<KP_Enter>", calculate_feet)
+
 root.mainloop()
