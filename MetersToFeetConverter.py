@@ -7,12 +7,12 @@ from windows import set_dpi_awareness
 
 set_dpi_awareness()
 
-
 class DistanceConverter(tk.Tk):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
         self.title("Distance Converter")
+        self.configure(bg="black")
         self.frames = dict()
 
         container = ttk.Frame(self)
@@ -88,6 +88,7 @@ class FeetToMeters(ttk.Frame):
             self,
             text="Switch to meters conversion",
             command=lambda: controller.show_frame(MetersToFeet)
+
         )
 
         feet_label.grid(column=0, row=0, sticky="W")
